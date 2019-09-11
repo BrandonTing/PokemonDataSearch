@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Data Search App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    
+</head>
+<body>
+    <div class = "container">
+        <div class="row">
+            <div class="offset-2 col-8">
+                <ul class = 'TeamImages row justify-content-center'>
+                    <li><a href="https://vocus.cc/pokemon_report_ting/5cf4e4e8fd89780001a11cd1" target="_blank"><img src="assets/NecroOgreScizor.png" alt="Necrozma & Kyogre Team" class = "TeamSanpshot left"></a></li>
+                    <li><a href="https://vocus.cc/pokemon_report_ting/5ccf8605fd89780001b66118" target="_blank"><img src="assets/RayOgre.png" alt="Rayquaza & Kyogre Team" class = "TeamSanpshot middle"></a></li>
+                    <li><a href="https://vocus.cc/pokemon_report_ting/5c7cebf9fd897800016d0608" target="_blank"><img src="assets/KyuremBlack.png" alt="Kyurem-Black & Solgaleo Team" class = "TeamSanpshot right"></a></li>
+                </ul>                
+            </div>
+        </div>
+        <ul class = "TeamSlots row">
+            <li class = 'TeamSlot1 col-2'></li>
+            <li class = 'TeamSlot2 col-2'></li>
+            <li class = 'TeamSlot3 col-2'></li>
+            <li class = 'TeamSlot4 col-2'></li>
+            <li class = 'TeamSlot5 col-2'></li>
+            <li class = 'TeamSlot6 col-2'></li>
+        </ul>
+        <div class = "Form row justify-content-center">
+            <div class="col-2 col-sm-1 d-flex justify-content-center">
+                <i class="fa fa-question-circle QMark"></i>
+            </div>
+            <input type="text" class = 'searchInput col col-sm' id='Pokemon' placeholder="pikachu">
+            <input type="text" class = 'searchInput col col-sm' id='Ability' placeholder="lightning-rod">
+            <input type="text" class = 'searchInput col col-sm' id='Move' placeholder="thunderbolt">
+            <button class="col-2 col-sm-2 btn btn-primary" id = 'searchButton'>Go!</button>
+        </div>
+        <div>
+            <div class="row tableTitle">
+                <h2>Search to know more about different Pokemons, Abilities and moves!</h2>
+            </div>
+            <div class="row tableContent"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
