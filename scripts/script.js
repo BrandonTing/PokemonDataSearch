@@ -128,22 +128,20 @@ showResult = (type) => {
                 setPokemonTable();
                 $('.tableTitle').html(table.title);
                 $('.tableContent').html(table.PokemonTable);
-                $('.addPokemon').click(evt => {
-                    addPokemon();
-                })
-                $('.resetResult').click(evt => {
-                    resetResult();
-                })            
+                $('.addPokemon').click(evt => {addPokemon()})
+                $('.resetResult').click(evt => {resetResult()})            
                 break;
             case 'ability': 
                 setAbilityTable();
                 $('.tableTitle').html(table.title);
                 $('.tableContent').html(table.AbilityTable);
+                $('.resetResult').click(evt => {resetResult()})            
                 break;
             case 'move':
                 setMoveTable();
                 $('.tableTitle').html(table.title);
                 $('.tableContent').html(table.MoveTable);
+                $('.resetResult').click(evt => {resetResult()})            
                 break;
             default:
                 return;
@@ -204,6 +202,8 @@ resetResult = () => {
     results = {};
     table = '';
     PokemonData = {};
+    $('.tableTitle').html('<h2>Search to know more about different Pokemons, Abilities and moves!<h2>');
+    $('.tableContent').html('');
 }
 
 setPokemonTable = () => {
@@ -243,7 +243,8 @@ setPokemonTable = () => {
 }
 
 setAbilityTable = () => {
-    table.title = `<div class="col text-center"><h2>${PokemonData.Ability}</h2></div>`;
+    table.title = `<div class="col-11 text-center"><h2>${PokemonData.Ability}</h2></div>`;
+    table.title += '<button class = "btn btn-danger resetResult col-1">-</button>';
     table.AbilityTable += '<table class="table resultTable">';
     table.AbilityTable += '<caption class="text-center">Description and Pokemons with this ability</caption>';
     table.AbilityTable += '<tr><td>Description</td>';
@@ -256,7 +257,8 @@ setAbilityTable = () => {
 }
 
 setMoveTable = () => {
-    table.title = `<div class="col text-center"><h2>${PokemonData.Move}</h2></div>`;
+    table.title = `<div class="col-11 text-center"><h2>${PokemonData.Move}</h2></div>`;
+    table.title += '<button class = "btn btn-danger resetResult col-1">-</button>';
     table.MoveTable += '<table class="table resultTable">';
     table.MoveTable += '<caption class="text-center">Description of the move</caption>';
     let features = Object.keys(results);
